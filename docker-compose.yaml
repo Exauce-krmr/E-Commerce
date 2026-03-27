@@ -1,0 +1,19 @@
+services:
+  backend:
+    container_name: backend-ct
+    build: backend
+    ports:
+      - 8000:8000
+
+
+  frontend:
+    container_name: frontend-ct
+    build: frontend
+    ports:
+      - 8080:80
+
+  mongodb:
+    image: mongo
+    container_name: mongodb-ct
+
+
